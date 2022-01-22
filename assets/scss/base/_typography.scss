@@ -1,0 +1,23 @@
+body {
+  color: var(--bodyColor);
+  font-family: $bodyFont;
+  line-height: 26px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headingFont;
+  color: var(--headingColor);
+}
+
+h4 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1;
+}

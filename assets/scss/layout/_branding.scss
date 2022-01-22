@@ -1,0 +1,100 @@
+// Brinding style
+.branding-area {
+    padding: 100px 0 50px 0;
+
+}
+
+
+.branding-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .branding-item {
+        flex: 0 0 33.33334%;
+        text-align: center;
+        padding: 45px;
+        border-bottom: none;
+        position: relative;
+        // border-right: 1px solid var(--borderColor);
+
+        // &:nth-child(3),
+        // &:nth-child(6),
+        // &:nth-child(9),
+        // &:nth-child(12) {
+        //     border-right: none;
+        // }
+    }
+
+    img {
+        min-height: 75px;
+    }
+}
+
+// .branding-item:nth-child(-n +3) {
+//     border-bottom: 1px solid var(--borderColor);
+// }
+
+.branding-item:nth-child(-n +3)::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(224, 230, 243, 0), rgba(224, 230, 243, 1));
+    left: 0;
+    bottom: 0;
+}
+
+.branding-item:nth-child(2)::after {
+    background: linear-gradient(90deg, rgba(224, 230, 243, 1), rgba(224, 230, 243, 1));
+}
+
+.branding-item:nth-child(3)::after {
+    background: linear-gradient(90deg, rgba(224, 230, 243, 1), rgba(224, 230, 243, 0));
+}
+
+.branding-item::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(rgba(224, 230, 243, 0), rgba(224, 230, 243, 1));
+    right: 0;
+    top: 0;
+}
+
+.branding-item:nth-child(4)::before,
+.branding-item:nth-child(5)::before {
+    background: linear-gradient(rgba(224, 230, 243, 1), rgba(224, 230, 243, 0));
+}
+
+.branding-item:nth-child(3)::before,
+.branding-item:nth-child(6)::before {
+    display: none;
+}
+
+
+
+//Media Breakpoint
+@include media-breakpoint-down(sm) {
+    .branding-area {
+        padding: 0;
+    }
+}
+
+@include media-breakpoint-only(xs) {
+    .branding-images {
+        .branding-item {
+            border-right: none;
+            border-bottom: 1px solid var(--borderColor);
+            flex: 0 0 100%;
+            &::before {
+                display: none;
+            }
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

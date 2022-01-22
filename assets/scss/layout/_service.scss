@@ -1,0 +1,168 @@
+// Service style
+.service-area {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.single-service {
+	flex: 0 0 33.33334%;
+	padding: 50px 40px;
+	transition: 0.3s;
+
+	&:hover {
+		box-shadow: 0px 25px 57px 3px rgba(0, 27, 103, 0.1);
+		z-index: 1;
+	}
+
+	background: var(--solidWhite);
+	border-left: 1px solid var(--borderColor);
+	border-bottom: 1px solid var(--borderColor);
+
+	&:nth-child(1),
+	&:nth-child(2),
+	&:nth-child(3) {
+		border-top: 1px solid var(--borderColor);
+	}
+
+	&:nth-child(3),
+	&:nth-child(6) {
+		border-right: 1px solid var(--borderColor);
+	}
+}
+
+.service-section-4 {
+	.single-service {
+		border: none;
+	}
+}
+
+.service-icon {
+	margin-bottom: 45px;
+	background-image: url(../../assets/images/service/dot.png);
+	background-repeat: no-repeat;
+
+	img {
+		padding-left: 5px;
+	}
+}
+
+.service-content {
+	margin-bottom: 45px;
+
+	h4 {
+		font-size: 21px;
+		font-weight: 600;
+		margin-bottom: 25px;
+		line-height: 1;
+	}
+
+	p {
+		color: #3d445b;
+		font-weight: 500;
+	}
+}
+
+.service-btn {
+	line-height: 1;
+}
+
+// Media Breakpoint
+
+@include media-breakpoint-only(lg) {
+	.single-service {
+		padding: 40px 30px;
+	}
+}
+
+@include media-breakpoint-only(md) {
+	.single-service {
+		flex: 0 0 50%;
+
+		&:nth-child(2),
+		&:nth-child(4) {
+			border-right: 1px solid var(--borderColor);
+		}
+
+		&:nth-child(3) {
+			border-top: none;
+			border-right: none;
+		}
+	}
+
+	.service-section-4 {
+		.single-service {
+			border: none;
+		}
+	}
+}
+
+@include media-breakpoint-only(xs) {
+	.single-service {
+		flex: 0 0 100%;
+
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(4),
+		&:nth-child(5) {
+			border-right: 1px solid var(--borderColor);
+		}
+
+		&:nth-child(2) {
+			border-top: none;
+			border-bottom: none;
+		}
+	}
+
+	.service-section-4 {
+		.single-service {
+			border: none;
+		}
+	}
+}
+
+// SVG Animation
+
+.animated .feather-feather path,
+.animated .feather-feather line {
+	stroke-dasharray: 55;
+	stroke-dashoffset: 55;
+	animation: dash 2s 1s linear forwards;
+}
+
+.animated .feather-pie-chart path {
+	stroke-dasharray: 50;
+	stroke-dashoffset: 50;
+	animation: dash 2s 1s linear forwards;
+}
+
+.animated .feather-trello rect {
+	stroke-dasharray: 70;
+	stroke-dashoffset: 70;
+	animation: dash 2s 1s linear forwards;
+}
+
+.animated .feather-sliders line {
+	stroke-dasharray: 20;
+	stroke-dashoffset: 20;
+	animation: dash 2s 1s linear forwards;
+}
+
+.animated .feather-airplay path,
+.animated .feather-airplay polygon {
+	stroke-dasharray: 50;
+	stroke-dashoffset: 50;
+	animation: dash 2s 1s linear forwards;
+}
+
+.animated .feather-video rect,
+.animated .feather-video polygon {
+	stroke-dasharray: 55;
+	stroke-dashoffset: 55;
+	animation: dash 2s 1s linear forwards;
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}

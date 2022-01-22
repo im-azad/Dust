@@ -1,0 +1,65 @@
+// Counter style
+.counter-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.single-counter {
+	flex: 0 0 25%;
+	padding-left: 70px;
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		width: 24px;
+		height: 4px;
+		background: var(--themeColor);
+		bottom: 0;
+		left: 70px;
+	}
+
+	h3 {
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	h4 {
+		font-size: 18px;
+		line-height: 42px;
+		font-weight: 600;
+		margin-bottom: 12px;
+		text-transform: uppercase;
+	}
+
+	@include media-breakpoint-down(xs) {
+		flex: 0 0 100%;
+		margin-bottom: 50px;
+	}
+
+	@include media-breakpoint-only(md) {
+		flex: 0 0 50%;
+		margin-bottom: 50px;
+	}
+}
+
+// Home two Counter style
+
+.counter-area {
+	.counter-wrapper {
+		background-image: url(../../assets/images/bg/4.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-color: var(--bodyColor);
+		padding: 70px 0;
+
+		.single-counter {
+			h4,
+			h3 {
+				color: var(--solidWhite);
+			}
+		}
+	}
+}

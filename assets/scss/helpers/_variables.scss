@@ -1,0 +1,28 @@
+/* All Root Variables */
+:root {
+	--themeColor: #92d9eb;
+	--bodyColor: #232940;
+	--headingColor: #232940;
+	--headingColorTwo: #3d445b;
+	--solidWhite: #ffffff;
+	--grayBackground: #f6f8fe;
+	--grayColor: #777e98;
+	--menuTextColor: #757fa6;
+	--borderColor: #e0e6f3;
+	--borderColor2: #dee4f2;
+	--lightColor: #717896;
+}
+
+// Font Family
+$headingFont: 'Barlow', sans-serif;
+$bodyFont: 'Quicksand', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+// Grid width classification
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+) !default;

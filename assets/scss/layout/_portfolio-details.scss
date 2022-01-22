@@ -1,0 +1,150 @@
+// Portfolio details style
+.portfolio-details-title-area {
+    padding: 290px 0 0 0;
+    margin-bottom: 80px;
+}
+
+.portfolio-project-details-title {
+    margin-bottom: 40px;
+}
+
+.portfolio-project-details-title {
+    h2 {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 72px;
+        margin-bottom: 14px;
+    }
+
+    p {
+        font-weight: 600;
+        line-height: 26px;
+        color: var(--grayColor);
+    }
+}
+
+.portfolio-details-title-img {
+    img {
+        width: 100%;
+    }
+}
+
+.portfolio-project-item-info-content {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.project-title {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-content-info {
+    font-weight: 500;
+    color: var(--headingColor);
+}
+
+.gray-color-para {
+    font-weight: 500;
+    color: var(--grayColor);
+}
+
+.project-content-details {
+    flex: 0 0 58%;
+}
+
+.project-clients-info,
+.project-date-info {
+    flex: 0 0 19%;
+    margin-left: 32px;
+}
+
+.column-count-2 {
+    column-count: 2;
+    column-gap: 50px;
+}
+
+.project-details-video {
+    margin-bottom: 80px;
+}
+
+.portfolio-project-slider {
+    img {
+        width: 100%;
+    }
+}
+
+
+//Media Breakpoint
+
+@include media-breakpoint-down(lg) {
+
+    .portfolio-project-item-info-content {
+        flex-wrap: wrap;
+    }
+
+    .project-content-details {
+        order: 2;
+    }
+
+    .project-clients-info,
+    .project-date-info {
+        margin-left: 0;
+        margin-right: 18px;
+    }
+
+    .project-details-video {
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+@include media-breakpoint-only(md) {
+
+    .project-clients-info,
+    .project-date-info {
+        flex: 0 0 20%;
+        margin-left: 0;
+        margin-right: 30px;
+    }
+
+    .project-content-details {
+        flex: 0 0 50%;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+    .project-clients-info,
+    .project-date-info {
+        flex: 0 0 40%;
+        margin-left: 0;
+        margin-right: 30px;
+    }
+
+    .project-content-details {
+        flex: 0 0 100%;
+    }
+
+    .portfolio-project-details-title {
+        h2 {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+    }
+
+    .portfolio-details-title-area {
+        padding: 180px 0 0 0;
+        margin-bottom: 50px;
+    }
+
+    .column-count-2 {
+        column-count: 1;
+    }
+
+}

@@ -1,0 +1,54 @@
+// Expert style
+.expert-area-content {
+    padding-right: 120px;
+}
+
+.expert-area-title {
+    p {
+        font-weight: 600;
+        color: var(--grayColor);
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+
+    h3 {
+        font-size: 36px;
+        line-height: 48px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+}
+
+.expert-describe {
+    p {
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+}
+
+.expert-progress-bar-wrapper {
+    .progress-bar-area {
+        margin: 0;
+        padding: 0;
+    }
+
+    .single-skill-bar {
+        padding-top: 0;
+        margin-bottom: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .progress {
+        margin-bottom: 0;
+    }
+}
+
+// Media breakpoint
+@include media-breakpoint-down(md) {
+    .expert-area-content {
+        padding-right: 0;
+    }
+}
